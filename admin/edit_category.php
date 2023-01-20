@@ -8,8 +8,9 @@ $name_err = $status_err = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-
+// this is for getting id 
     $id = $_POST['id'];
+// this is for getting id 
 
     if($_POST['name'] != ''){
         $name = $db->verify($_POST['name']);
