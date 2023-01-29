@@ -27,11 +27,12 @@ class Database {
 	public function insert($data){
 		$insert_data = $this->connection->query($data);
 
-		if ($insert_data) {
-			return $insert_data;
-		}else{
-			return false;
-		}
+		return $insert_data;
+		// if ($insert_data) {
+		// 	return $insert_data;
+		// }else{
+		// 	return false;
+		// }
 	}
 
 

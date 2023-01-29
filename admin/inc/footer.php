@@ -27,6 +27,14 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.18.0/ckeditor.js"></script>
+
+  <script type="text/javascript">
+    CKEDITOR.replace('description',{
+      height: "200px"
+    }); 
+
+  </script>
 
 </body>
 
