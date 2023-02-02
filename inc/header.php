@@ -1,3 +1,14 @@
+<?php 
+
+include_once('lib/database.php');
+include_once('lib/helper.php');
+include_once('lib/session.php');
+Session::CheckSession();
+$db = new Database();
+$hp = new Helper();
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +41,13 @@ https://templatemo.com/tm-551-stand-blog
   <body>
 
     <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="jumper">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div> -->  
     <!-- ***** Preloader End ***** -->
 
     <!-- Header -->

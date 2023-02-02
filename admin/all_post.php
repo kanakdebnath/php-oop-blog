@@ -29,7 +29,12 @@ if(isset($_GET['id'])){
 // for delete data 
 
 
-$sql = "SELECT * FROM posts";
+// $sql = "SELECT * FROM posts";
+
+$sql = "SELECT *, posts.id AS pid, categories.id AS cid,categories.name
+                      FROM posts
+                      INNER JOIN categories ON posts.category_id = categories.id";
+
 $result = $db->select($sql);
 
  ?>
@@ -86,16 +91,8 @@ $result = $db->select($sql);
                   <tr>
                     <td><?php echo $i  ?></td>
                     <td><?php echo $row['title']  ?></td>
-                    <?php 
 
-                      $id = $row['category_id'];
-  
-                      $sql = "SELECT * FROM categories WHERE id = '$id'";
-                      $result_category = $db->select($sql);
-                      $row_category = mysqli_fetch_assoc($result_category);
-                     ?>
-
-                    <td><?php echo $row_category['name']  ?></td>
+                    <td><?php echo $row['name']  ?></td>
                     <td>
                       <img width="120" height="80" src="<?php echo $row['photo']  ?>">
                     </td>
